@@ -1,0 +1,75 @@
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9; /* light gray background */
+    color: #333; /*dark gray*/
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #ff9a9e, #fad0c4); /* Soft pink gradient */
+    color: #4b0082; /* Elegant purple */
+    text-align: center;
+    padding: 20px; /* Extra padding for a modern look */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem; /* Increase font size for prominence */
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #87ceeb; /* Calm sky blue */
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a soft shadow */
+}
+
+nav a {
+    color: #fff; /* White text for contrast */
+    text-decoration: none;   /* to remove underline for the links */
+    padding: 10px 20px;  /* verticla and horizontal spacing */
+    margin: 10px; /* Add spacing between links */
+    background-color: #4682b4; /* Steel blue background */
+    border-radius:0 10px; /* Rounded corners */
+    transition: background-color 0.3s ease, color 2s ease;
+}
+
+nav a:hover {
+    background-color: #ffa07a; /* Light salmon on hover */
+    color: black; /* Dark text for readability */
+}
+
+/* Section */
+section {
+    padding: 20px;
+    border-bottom: 1px solid #ddd; /* Subtle border for separation */
+    background-color: #ffffff; /* Clean white for contrast */
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #4b0082; /* Elegant purple */
+    color: #fff; /* White text for contrast */
+    margin-top: 20px;
+    border-radius: 0 0 10px 10px; /* Rounded bottom corners */
+}
+
+footer a {
+    color: #ffa07a; /* Light salmon for links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #fff; /* White on hover */
+}

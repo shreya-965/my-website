@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- The title of the webpage, shown in the browser tab -->
+    <title>My Portfolio</title>
+
+    <!-- Link to the external CSS file for styling -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- The header section of the webpage -->
+    <header>
+        <h1>Welcome to My Portfolio!</h1>
+        <h2></h2> <!-- This will dynamically update with a greeting -->
+    </header>
+
+    <!-- Navigation bar with links to different sections -->
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- JavaScript to dynamically display a greeting based on the time of day -->
+    <script>
+        // Select the second header (h2) inside the header
+        const header = document.querySelector('header h2');
+        const now = new Date(); // Get the current date and time
+        const hour = now.getHours(); // Extract the current hour
+        let greeting = "Welcome to My Portfolio!";
+
+        // Update the greeting based on the time of day
+        if (hour < 12) {
+            greeting = "Good Morning!";
+        } else if (hour < 16) {
+            greeting = "Good Afternoon!";
+        } else {
+            greeting = "Good Evening!";
+        }
+
+        // Set the text content of the h2 element to the greeting
+        header.textContent = greeting;
+    </script>
+
+    <!-- JavaScript to enable smooth scrolling for navigation links -->
+    <script>
+        // Add smooth scrolling behavior for each navigation link
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault(); // Prevent the default link behavior
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth' // Smooth scrolling effect
+                });
+            });
+        });
+    </script>
+
+    <!-- About Me section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello everyone! I'm Shreyashree Sobarad, B.Tech first year ECE student.</p>
+        <p>I'm a web developer with a passion for crafting delightful user experiences.</p>
+        <p>My hobbies include painting, coding, or diving into a good book.</p>
+        <p>I'm also passionate to work with Arduino MCU.</p>
+        <p>I indulge myself in yoga and meditation as they bring calmness.</p>
+    </section>
+
+    <!-- Projects section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <!-- List of projects -->
+                <strong>Project 1: Microcontroller</strong>
+                <p>Completed my course in "Automation with Arduino Microcontroller" at PESU IO Slot 18, where I worked on creating an "Automatic Door Open and Close" system. This project allowed me to dive deeper into the world of automation and enhance my skills in Arduino programming and electronics.</p>
+                <strong>Project 2: Personal Portfolio</strong>
+                <p>A responsive portfolio website showcasing my skills and projects. Built using HTML, CSS, and JavaScript.</p>
+        </ul>
+    </section>
+
+    <!-- Contact section -->
+    <footer id="contact">
+        <h2>Contact Me</h2>
+
+        <!-- Contact information -->
+        <p>Email: <a href="mailto:shreyashreesobarad@gmail.com">shreyashreesobarad@gmail.com</a></p>
+        <p>Phone: 1234567890</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/shreyashree-sobarad-46245632a/" target="_blank">Visit My LinkedIn Profile</a></p>
+
+        <!-- Contact form -->
+        <form action="mailto:shreyashreesobarad@gmail.com" method="post" enctype="text/plain">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+            <button type="submit">Send</button>
+        </form>
+    </footer>
+</body>
+
+</html>
